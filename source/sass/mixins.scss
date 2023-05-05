@@ -56,6 +56,12 @@
   }
 }
 
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
+    @content;
+  }
+}
+
 @mixin vp-1023 {
   @media (max-width: ($vp-1024 - 1px)) {
     @content;
@@ -76,7 +82,7 @@
 
 // my
 
-@mixin font-values($weight: 400, $size: 16px, $height: 1.5, $color: $color-text) {
+@mixin font-values($weight: 400, $size: 16px, $height: 1.5, $color: $color-sapphire) {
   font-weight: $weight;
   font-size: $size;
   line-height: $height;
