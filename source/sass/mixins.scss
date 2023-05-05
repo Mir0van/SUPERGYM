@@ -74,6 +74,15 @@
   }
 }
 
+// my
+
+@mixin font-values($weight: 400, $size: 16px, $height: 1.5, $color: $color-text) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
 // Mobile first
 
 // @mixin vp-375 {
