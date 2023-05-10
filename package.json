@@ -16,7 +16,7 @@
     "dev": "gulp dev",
     "start": "gulp start",
     "webp": "gulp webp",
-    "publish": "cross-env NODE_ENV=production gulp build && gh-pages -d build"
+    "publish": "gulp build && gh-pages -d build"
   },
   "editorconfig-cli": [
     "*.json",
