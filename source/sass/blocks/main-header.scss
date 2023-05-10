@@ -6,11 +6,13 @@
   @include vp-1199 {
     padding-top: 34px;
     padding-bottom: 82px;
+    background-image: $color-conic-gradient-secondary;
   }
 
   @include vp-767 {
     padding-top: 16px;
     padding-bottom: 78px;
+    background-image: $color-conic-gradient-tertiary;
   }
 }
 
