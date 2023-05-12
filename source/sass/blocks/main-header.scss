@@ -53,17 +53,28 @@
       fill: rgba($color-default-white, 80%);
     }
   }
+
+  @include focus {
+    outline: 2px solid $color-default-white;
+    outline-offset: 2px;
+  }
 }
 
 .main-header__tel {
   @include font-values(600, 26px, 31px, $color-default-white);
   font-family: $ff-alumni-sans;
   letter-spacing: 0.03em;
+  align-self: start;
 
   transition: color $trans-default;
 
   @include hover {
     color: rgba($color-default-white, 80%);
+  }
+
+  @include focus {
+    outline: 2px solid $color-default-white;
+    outline-offset: 2px;
   }
 
   @include vp-1199 {

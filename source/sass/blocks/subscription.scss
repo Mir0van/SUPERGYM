@@ -1,0 +1,175 @@
+.subscription {
+  padding-top: 121px;
+  padding-bottom: 120px;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding-top: 101px;
+    padding-bottom: 97px;
+  }
+
+  @include vp-767 {
+    padding-top: 64px;
+    padding-bottom: 70px;
+  }
+
+  h2 {
+    @include font-values(600, 54px, 1.2, $color-sapphire);
+    font-family: $ff-alumni-sans;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 0;
+
+    @include vp-1199 {
+      font-size: 42px;
+      padding-right: 14px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      padding-right: 9px;
+    }
+  }
+}
+
+.subscription__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 39.5px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-767 {
+    row-gap: 34.5px;
+  }
+}
+
+.subscription__item {
+  padding: 7px;
+  background-color: $color-default-white;
+  overflow-x: hidden;
+
+  @include hover {
+    background-image: $color-linear-gradient-tertiary;
+  }
+
+  &:focus-within {
+    background-image: $color-linear-gradient-tertiary;
+  }
+
+  &:focus-within .subscription__button {
+    background-image: $color-linear-gradient;
+    outline: none;
+    color: $color-default-white;
+    opacity: 1;
+  }
+
+  @include vp-1199 {
+    width: 65.1%;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.subscription__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-default-white;
+  padding: 55px 20px 61px;
+  height: 100%;
+
+  @include vp-767 {
+    padding: 44px 20px 47px;
+  }
+
+  & > h3 {
+    @include font-values(700, 26px, 1.2);
+    margin: 0;
+    margin-bottom: 10px;
+
+    @include vp-767 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+  }
+
+  & > span {
+    @include font-values(400, 16px, 1.5);
+    margin-bottom: 65px;
+
+    @include vp-767 {
+      margin-bottom: 54px;
+    }
+  }
+
+  @include hover {
+    outline: 7px solid $color-linear-gradient;
+    outline-offset: -7px;
+  }
+}
+
+.subscription__price {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  margin-bottom: 33px;
+  position: relative;
+
+  @include vp-767 {
+    column-gap: 10px;
+    margin-bottom: 29px;
+  }
+
+  & > span {
+    @include font-values(700, 60px, 1.5, $color-egyptian-blue);
+    z-index: 1;
+
+    @include vp-767 {
+      font-size: 48px;
+    }
+  }
+
+  & > span + span {
+    @include font-values(700, 100px, 1.5, $color-whisper);
+    position: absolute;
+    z-index: 0;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include vp-767 {
+      font-size: 80px;
+    }
+  }
+
+  & > svg {
+    z-index: 1;
+
+    @include vp-767 {
+      width: 24px;
+    }
+  }
+}
+
+.subscription__button {
+  min-width: 208px;
+  padding: 27px 20px 25px;
+  margin-top: auto;
+
+  @include hover {
+    background-image: $color-linear-gradient;
+    outline: none;
+    color: $color-default-white;
+    opacity: 1;
+  }
+}

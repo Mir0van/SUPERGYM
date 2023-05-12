@@ -14,18 +14,26 @@
   cursor: pointer;
 
   transition: opacity $trans-default;
+  background-color: transparent;
 
   &--red {
     background-color: $color-torch-red;
   }
 
+  &--dark {
+    border: none;
+    outline: 2px solid $color-sapphire;
+    outline-offset: -2px;
+    color: $color-sapphire;
+  }
+
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    outline: none;
+    border-image: $color-linear-gradient-tertiary 1;
   }
 }
