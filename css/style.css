@@ -1758,6 +1758,7 @@ button,
   padding-top: 121px;
   padding-bottom: 120px;
   background-color: #f8f9fc;
+  position: relative;
 }
 
 .subscription h2 {
@@ -1769,6 +1770,12 @@ button,
   text-align: center;
   letter-spacing: 0.03em;
   margin: 0;
+}
+
+.subscription__image-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: -149px;
 }
 
 .subscription__list {
@@ -1881,6 +1888,10 @@ button,
   min-width: 208px;
   padding: 27px 20px 25px;
   margin-top: auto;
+}
+
+.promo {
+  height: 1000px;
 }
 
 /* @mixin hover-focus {
@@ -2102,6 +2113,15 @@ button,
     padding-right: 14px;
   }
 
+  .subscription__image-wrapper {
+    bottom: -126px;
+  }
+
+  .subscription__image-wrapper img {
+    width: 347px;
+    height: 444px;
+  }
+
   .subscription__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -2305,6 +2325,10 @@ button,
   .subscription h2 {
     font-size: 32px;
     padding-right: 9px;
+  }
+
+  .subscription__image-wrapper {
+    display: none;
   }
 
   .subscription__list {
