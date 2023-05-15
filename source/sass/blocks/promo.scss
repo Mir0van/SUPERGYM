@@ -42,7 +42,7 @@
   width: 346px;
 
   @include vp-1199 {
-    width: 80.5%
+    width: 80.5%;
   }
 
   @include vp-767 {
@@ -59,7 +59,7 @@
     @include vp-1199 {
       font-size: 48px;
       margin-left: 8px;
-      max-width: 213px
+      max-width: 213px;
     }
   }
 
