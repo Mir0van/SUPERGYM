@@ -3,6 +3,10 @@
   padding-bottom: 120px;
   background-color: $color-ghost-white;
 
+  position: relative;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
+
   @include vp-1199 {
     padding-top: 101px;
     padding-bottom: 97px;
@@ -29,6 +33,25 @@
       font-size: 32px;
       padding-right: 9px;
     }
+  }
+}
+
+.subscription__image-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: -149px;
+
+  @include vp-1199 {
+    bottom: -126px;
+
+    img {
+      width: 347px;
+      height: 444px;
+    }
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }
 
