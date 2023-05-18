@@ -1,0 +1,116 @@
+.coaches {
+  padding-top: 57px;
+  padding-bottom: 50px;
+
+  @include vp-1199 {
+    padding-top: 51px;
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+  }
+
+  h2 {
+    @include font-values(600, 54px, 1.2, $color-sapphire);
+    font-family: $ff-alumni-sans;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-left: 2px;
+    margin-bottom: 47px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      text-align: center;
+      margin-left: -5px;
+      margin-bottom: 31px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      margin-bottom: 42px;
+    }
+  }
+}
+
+.coaches__slider-wrapper {
+  position: relative;
+  margin: 0 auto;
+  // width: 93.8%;
+  // padding: 0 42px;
+  max-width: 1302px;
+  padding: 0 10px;
+
+  @include vp-1199 {
+    padding: 0;
+    width: 89.5%;
+  }
+
+  @include vp-767 {
+    width: 95.5%;
+  }
+}
+
+.coaches__slider {
+  width: 90.5%;
+
+  @include vp-1199 {
+    width: 82.3%;
+  }
+
+  @include vp-767 {
+    width: 74%;
+  }
+}
+
+.coaches__arrow {
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    font-family: none;
+    width: 1px;
+    height: 23px;
+    background-color: $color-dark-gray;
+
+    @include vp-767 {
+      height: 13px;
+    }
+  }
+
+  &::before {
+    transform: translateY(11px) rotate(45deg);
+    top: -8px;
+
+    @include vp-767 {
+      transform: translateY(15px) rotate(45deg);
+      top: -4.5px;
+    }
+  }
+
+  &::after {
+    transform: translateY(11px) rotate(-45deg);
+    top: 8px;
+
+    @include vp-767 {
+      transform: translateY(15px) rotate(-45deg);
+      top: 4.5px;
+    }
+  }
+
+  &--forward {
+    left: 10px;
+
+    @include vp-1199 {
+      left: 0;
+    }
+  }
+
+  &--back {
+    right: 10px;
+    transform: rotate(180deg);
+
+    @include vp-1199 {
+      right: 0;
+    }
+  }
+}

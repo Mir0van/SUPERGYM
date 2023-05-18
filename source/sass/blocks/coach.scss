@@ -1,0 +1,156 @@
+.coach {
+  width: 260px;
+  // height: 294px;
+  position: relative;
+
+  @include vp-1199 {
+    width: 268px;
+    height: 38.2vw;
+  }
+
+  @include vp-767 {
+    height: 85.5vw;
+  }
+
+  @include hover {
+    .coach__content {
+      justify-content: center;
+      z-index: 10;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba($color-sapphire, 89%);
+        z-index: -1;
+      }
+
+      h3 {
+        margin: 0;
+      }
+    }
+
+    .coach__description {
+      display: block;
+    }
+  }
+
+  &:focus-within {
+    .coach__content {
+      justify-content: center;
+      z-index: 10;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba($color-sapphire, 89%);
+        z-index: -1;
+      }
+
+      h3 {
+        margin: 0;
+      }
+    }
+
+    .coach__description {
+      display: block;
+    }
+  }
+}
+
+.coach__image {
+  width: 100%;
+  height: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.coach__content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+
+  padding: 27px 9.5% 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  h3 {
+    @include font-values(700, 18px, 1.2, $color-default-white);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 14px;
+  }
+}
+
+.coach__description {
+  display: none;
+
+  & > p {
+    @include font-values(400, 16px, 1.5, $color-default-white);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 32px;
+
+    @include vp-1199 {
+      margin-left: -5px;
+    }
+
+    @include vp-767 {
+      margin-left: 0;
+    }
+  }
+}
+
+.coach__advantages {
+  @include font-values(400, 14px, 1.5, $color-default-white);
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  text-decoration: none;
+  max-width: 180px;
+
+  @include vp-1199 {
+    margin: 0 auto;
+    transform: translateX(11px);
+  }
+
+  li {
+    margin-bottom: 13px;
+    text-align: left;
+    display: flex;
+    align-items: start;
+    column-gap: 10px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-default-white;
+      transform: translateY(8px);
+      flex-shrink: 0;
+
+      @include vp-1199 {
+        transform: translateY(6px);
+      }
+    }
+  }
+}
