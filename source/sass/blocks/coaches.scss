@@ -65,6 +65,18 @@
 }
 
 .coaches__arrow {
+  @include hover {
+    &::before,
+    &::after {
+      background-color: $color-sapphire;
+    }
+  }
+
+  @include focus {
+    outline: 2px solid $color-sapphire;
+    outline-offset: +1px;
+  }
+
   &::before,
   &::after {
     position: absolute;
