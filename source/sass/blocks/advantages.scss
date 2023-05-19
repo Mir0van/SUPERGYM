@@ -1,0 +1,240 @@
+.advantages {
+  padding-top: 98px;
+  padding-bottom: 100px;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
+
+  @include vp-767 {
+    padding-top: 65px;
+    padding-bottom: 63px;
+  }
+
+  h2 {
+    @include font-values(600, 54px, 1.2, $color-sapphire);
+    font-family: $ff-alumni-sans;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0;
+    margin-right: -10px;
+    margin-bottom: 44px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      margin: 0;
+      margin-bottom: 42px;
+      padding-right: 22px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      margin-bottom: 42px;
+      padding-right: 17px;
+    }
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0 58px;
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: 1fr 240px 1fr;
+  column-gap: 60px;
+  row-gap: 148px;
+
+  @include vp-1199 {
+    padding: 0;
+
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 43px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    row-gap: 34px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  column-gap: 30px;
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 0 32px;
+  }
+
+  &--accent {
+    flex-direction: column;
+    justify-content: center;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+
+    background-color: $color-resolution-blue;
+    text-align: center;
+    padding: 15px 34px 20px;
+    margin-top: 11px;
+    margin-bottom: 5px;
+
+    @include vp-1199 {
+      justify-content: start;
+      align-items: center;
+
+      grid-column: 1 / -1;
+      grid-row: auto;
+
+      margin: 0;
+      padding: 34px 33px 38px;
+      width: 65.2%;
+
+      justify-self: center;
+    }
+
+    @include vp-767 {
+      width: calc(100% + 30px);
+      padding: 38px 33px 42px;
+      margin-top: 9px;
+      margin-bottom: 8px;
+    }
+
+    & > b {
+      @include font-values(700, 74px, 1, $color-default-white);
+      margin-bottom: 2px;
+
+      @include vp-1199 {
+        margin-bottom: -2px;
+        margin-left: -5px;
+      }
+
+      @include vp-767 {
+        margin-bottom: -6px;
+      }
+    }
+
+    & > h3 {
+      @include font-values(700, 26px, 1.5, $color-default-white);
+      margin: 0;
+      margin-bottom: 32px;
+
+      @include vp-1199 {
+        font-size: 22px;
+        margin-bottom: 14px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 10px;
+      }
+    }
+
+    & > p {
+      @include font-values(400, 16px, 1.5, $color-default-white);
+      margin: 0;
+
+      @include vp-1199 {
+        max-width: 172px;
+      }
+    }
+  }
+
+  &--left {
+    padding-left: 22px;
+
+    @include vp-1199 {
+      padding-left: 0;
+    }
+
+    @include vp-767 {
+      padding-left: 32px;
+    }
+  }
+
+  &--decorate {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      left: 0;
+      right: 0;
+      bottom: -78px;
+      background-color: rgb($color-crimson, 20%);
+
+      @include vp-1199 {
+        content: none;
+      }
+    }
+  }
+
+  &--coach {
+    column-gap: 34px;
+
+    @include vp-1199 {
+      column-gap: 30px;
+    }
+
+    @include vp-767 {
+      p {
+        width: calc(100% + 10px);
+      }
+    }
+  }
+}
+
+.advantages__column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  @include vp-767 {
+    align-items: center;
+  }
+
+  & > b {
+    @include font-values(700, 71px, 1);
+    background-image: $color-linear-gradient-secondary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include vp-1199 {
+      font-size: 58px;
+    }
+  }
+
+  & > span {
+    @include font-values(400, 14px, 1, $persian-blue);
+
+    @include vp-767 {
+      margin-bottom: 9px;
+    }
+  }
+
+  & > h3 {
+    @include font-values(700, 22px, 1.5);
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 2px;
+    }
+  }
+
+  & > p {
+    @include font-values(300, 16px, 1.4);
+    margin: 0;
+
+    @include vp-767 {
+      text-align: center;
+    }
+  }
+}
