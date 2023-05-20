@@ -112,19 +112,19 @@
   }
 
   &--forward {
-    left: 10px;
-
-    @include vp-1199 {
-      left: 0;
-    }
-  }
-
-  &--back {
     right: 10px;
     transform: rotate(180deg);
 
     @include vp-1199 {
       right: 0;
+    }
+  }
+
+  &--back {
+    left: 10px;
+
+    @include vp-1199 {
+      left: 0;
     }
   }
 }

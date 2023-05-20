@@ -9,8 +9,8 @@ const initCoachesSwiper = () => {
       loop: true,
 
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next--coaches',
+        prevEl: '.swiper-button-prev--coaches',
       },
 
       breakpoints: {
