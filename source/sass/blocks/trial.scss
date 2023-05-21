@@ -1,0 +1,56 @@
+.trial {
+  background-color: $color-sapphire;
+  padding-top: 66px;
+  padding-bottom: 66px;
+
+  @include vp-1199 {
+    padding-top: 61px;
+    padding-bottom: 69px;
+  }
+
+  @include vp-767 {
+    padding-top: 64px;
+  }
+
+  h2 {
+    @include font-values(800, 54px, 1.2, $color-default-white);
+    font-family: $ff-alumni-sans;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0;
+    padding-right: 13%;
+    margin-bottom: 24px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      font-weight: 700;
+      text-align: left;
+      padding: 0;
+      margin-left: 1px;
+      margin-bottom: 28px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-left: 0;
+      margin-bottom: 31px;
+    }
+  }
+}
+
+.trial__wrapper {
+  max-width: 683px;
+  margin-left: auto;
+
+  @include vp-1199 {
+    max-width: 594px;
+    margin: 0 auto;
+    padding: 0 45px;
+
+    @include vp-767 {
+      padding: 0 15px;
+      max-width: none;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.form {
+  form {
+    padding-right: 9.7%;
+
+    @include vp-1199 {
+      padding: 0;
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+}
+
+.form__inputs-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 28px;
+  column-gap: 26px;
+
+  width: 413px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    width: auto;
+    padding-right: 29px;
+    column-gap: 55px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
+
+.form__btn {
+  width: 100%;
+  grid-column: 1 / -1;
+  border-width: 3px;
+  font-size: 14px;
+  padding: 17px 20px 15px;
+
+  @include vp-767 {
+    margin-top: 10px;
+  }
+}

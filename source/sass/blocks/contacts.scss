@@ -1,0 +1,171 @@
+.contacts {
+  border-top: 1px solid $color-light-slate-grey;
+  padding-top: 57px;
+
+  @include vp-1199 {
+    border-top: none;
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  @include vp-767 {
+    padding-top: 63px;
+  }
+
+  h2 {
+    @include font-values(600, 54px, 1.2);
+    font-family: $ff-alumni-sans;
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin: 0;
+    padding-left: 17.6%;
+    margin-bottom: 37px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      padding: 0;
+      margin-bottom: 32px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.contacts__wrapper {
+  max-width: 683px;
+  margin-right: auto;
+
+  @include vp-1199 {
+    max-width: 594px;
+    margin: 0 auto;
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+    max-width: none;
+  }
+
+  address {
+    font-style: normal;
+    padding-left: 17.6%;
+
+    @include vp-1199 {
+      padding: 0;
+    }
+  }
+}
+
+.contacts__list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 3px;
+  width: 468px;
+  row-gap: 19px;
+  column-gap: 120px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    top: 6px;
+    bottom: 7px;
+    left: 50%;
+    background-color: $color-light-slate-grey;
+
+    @include vp-1199 {
+      left: 53%;
+      top: 8px;
+      bottom: 8px;
+    }
+
+    @include vp-767 {
+      content: none;
+    }
+  }
+
+  @include vp-1199 {
+    width: auto;
+    padding: 0;
+    column-gap: 50px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+
+  &--address {
+    order: 1;
+  }
+
+  &--time {
+    order: 3;
+
+    @include vp-767 {
+      order: 2;
+    }
+  }
+
+  &--tel {
+    order: 2;
+    @include vp-1199 {
+      margin-left: 38px;
+    }
+
+    @include vp-767 {
+      margin-left: 0;
+    }
+  }
+
+  &--mail {
+    order: 4;
+    @include vp-1199 {
+      margin-left: 38px;
+    }
+
+    @include vp-767 {
+      margin-left: 0;
+    }
+  }
+
+  dt {
+    @include font-values(700, 16px, 1.5);
+    margin-bottom: 3px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+  }
+
+  dd {
+    @include font-values(400, 14px, 1.5);
+    margin: 0;
+
+    @include vp-1199 {
+      font-size: 18px;
+    }
+
+    a {
+      color: $color-sapphire;
+
+      @include hover {
+        color: rgb($color-sapphire, 80%);
+      }
+
+      @include focus {
+        outline: 2px solid $color-sapphire;
+      }
+    }
+  }
+}
