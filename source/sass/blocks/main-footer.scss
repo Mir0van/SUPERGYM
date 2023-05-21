@@ -1,0 +1,200 @@
+.main-footer {
+  background-color: $color-black-russian;
+  padding-top: 37px;
+  padding-bottom: 33px;
+
+  @include vp-1199 {
+    padding-top: 39px;
+    padding-bottom: 42px;
+  }
+
+  @include vp-767 {
+    padding-top: 41px;
+    padding-bottom: 50px;
+  }
+}
+
+.main-footer__wrapper {
+  display: grid;
+  grid-template-columns: 95px 1fr auto;
+  column-gap: 50px;
+
+  @include vp-1199 {
+    grid-template-columns: 82px 1fr auto;
+    column-gap: 25px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.main-footer__logo-wrapper {
+  @include vp-767 {
+    z-index: 10;
+  }
+}
+
+.main-footer__logo-link {
+  display: block;
+  margin-top: 6px;
+
+  @include vp-1199 {
+    margin-top: 0;
+  }
+
+
+  svg {
+    display: block;
+
+    @include vp-1199 {
+      width: 81px;
+    }
+
+    @include vp-767 {
+      width: 67px;
+    }
+  }
+
+  @include hover-focus {
+    svg {
+      fill: rgba($color-default-white, 70%);
+    }
+  }
+
+  @include focus {
+    outline: none;
+
+    svg {
+      fill: $color-default-white;
+      outline: 1px solid $color-default-white;
+      outline-offset: 3px;
+    }
+  }
+}
+
+.main-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  align-self: start;
+  justify-self: center;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24.5px;
+
+
+  @include vp-1199 {
+    column-gap: 14.5px;
+    padding-left: 15px;
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 23px;
+    row-gap: 4px;
+
+    padding-left: 0;
+    margin-left: -8px;
+    width: calc(100% + 8px);
+
+    position: relative;
+    top: -33px;
+    margin-bottom: -33px;
+  }
+}
+
+.main-footer__item {
+  @include vp-767 {
+    &--services {
+      grid-row: 1 / 3;
+      align-self: end;
+    }
+
+    &--abonnements {
+      grid-column: 1/2;
+      grid-row: 3 / 4;
+    }
+
+    &--stocks {
+      grid-column: 2/3;
+      grid-row: 1 / 2;
+    }
+
+    &--coaches {
+      grid-column: 2/3;
+    }
+
+    &--schedule {
+      grid-column: 2/3;
+    }
+  }
+}
+
+.main-footer__link {
+  @include font-values(400, 14px, 1.14, $color-default-white);
+  display: block;
+  padding: 10px 8px;
+
+  @include vp-767 {
+    padding: 8.6px 8px;
+    font-size: 16px;
+  }
+
+  @include hover {
+    color: rgba($color-default-white, 70%);
+  }
+
+  @include focus {
+    outline: 1px solid $color-default-white;
+  }
+}
+
+.main-footer__list-social {
+  margin: 0;
+  margin-top: 4px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 277px;
+  column-gap: 11px;
+  row-gap: 10px;
+
+  align-self: start;
+
+  @include vp-1199 {
+    transform: translateX(6px);
+    max-width: 133px;
+    margin-top: 5px;
+  }
+
+  @include vp-767 {
+    transform: translate(0);
+    margin-top: 28px;
+  }
+}
+
+.main-footer__link-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $color-default-white;
+
+  @include hover {
+    background-color: rgba($color-default-white, 70%);
+  }
+
+  @include focus {
+    background-color: $color-default-white;
+    outline: 2px solid $color-torch-red;
+  }
+}

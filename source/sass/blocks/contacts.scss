@@ -118,6 +118,7 @@
 
   &--tel {
     order: 2;
+
     @include vp-1199 {
       margin-left: 38px;
     }
@@ -129,6 +130,7 @@
 
   &--mail {
     order: 4;
+
     @include vp-1199 {
       margin-left: 38px;
     }
