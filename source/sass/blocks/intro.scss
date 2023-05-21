@@ -53,6 +53,7 @@
     margin-top: 15px;
     transform: translateX(-34px);
     grid-area: 2 / 2 / 3 / 3;
+    -webkit-text-stroke: 2px;
 
     @include vp-1199 {
       font-size: 72px;
